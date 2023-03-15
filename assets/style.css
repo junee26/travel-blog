@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+header {
+  display: flex;
+  padding: 1rem;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.15);
+}
+header img {
+  height: 60px;
+}
+nav {
+  text-align: right;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 8px 20px;
+  position: relative;
+  z-index: 99;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--dark-color);
+}
+
+.banner-layout .item {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-image: url("./images/banner.jpg");
+  background-position: center center;
+  position: relative;
+  z-index: 0;
+}
+.banner-layout .item:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.banner-layout .item .caption {
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  padding: 130px;
+  max-width: 920px;
+}
+
+#banner .caption .title {
+  font-size: 70px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+/*.banner-layout .popular-search {
+    font-size: .889em;
+    color: #fff;
+    display: block;
+    margin: 0 0 50px;
+}
+.banner-layout .popular-search a:first-child {
+    margin-left: 15px;
+}
+.banner-layout .popular-search a {
+    font-size: .813em;
+    color: #fff;
+    background: rgba(0,0,0,.2);
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 1;
+    padding: 7px 10px 5px;
+    -webkit-transition: ease .2s;
+    -moz-transition: ease .2s;
+    transition: ease .2s;
+}*/
+.banner-layout{
+  margin: 0 0 70px;
+}
+.banner-layout .caption .date-author{
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 30px;
+  justify-content: center;
+  margin: 0 0 20px;
+}
+.banner-layout .caption .date-author .date{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  grid-gap: 8px;
+}
+.banner-layout .caption .date-author img{
+  width: 16px;
+}
+.banner-layout .caption .content p{
+  margin: 0 0 25px;
+}
+.banner-layout .btn-viewall {
+  display: inline-block;
+  color: #fff;
+  font-family: 'Avenir LT Std Medium';
+  background: #DEAE6B;
+  border: 1px solid #DEAE6B;
+  border-radius: 100px;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.blog-grid-view{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 30px;
+}
+
+
+.blog-container{
+  padding: 0 4rem;
+}
+.blog-container .title-search{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  grid-gap: 30px;
+  margin: 0 0 30px;
+}
+.blog-container .title-search h2{
+  font-size: 38px;
+}
+.blog-container .title-search input{
+  height: 30px;
+  padding: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+.news-snippet .summary {
+  padding: 2rem 2rem 1rem 2rem;
+  border: 1px solid #ddd;
+}
+.news-snippet .featured-image {
+  background: none;
+  margin: 0;
+  display: flex;
+}
+.featured-image img {
+  width: 100%;
+  height: 300px;
+}
+.news-snippet .news-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.news-snippet .news-title a{
+  color: #DEAE6B;
+}
+.info {
+  margin: 1rem 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #969aa5;
+}
+.info.ihead, .info.ifoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-inline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.list-inline a {
+  background: none;
+  color: #969aa5;
+  display: inline-flex;
+}
+.info .post-author {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+.info .post-author:before {
+  content: "";
+  background-color: #969aa5;
+  height: 1px;
+  width: 20px;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.news-snippet .summary .excerpt {
+  margin: 1rem 0 2rem 0;
+  font-family: var(--primary-font);
+}
+.readmore {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #DEAE6B;
+}
+.social-share .list-inline {
+  gap: 7px;
+}
+.social-share .list-inline li {
+  display: inline-flex;
+}
+.social-share .list-inline li a img{
+  width: 16px;
+}
+
+
+
+.detail-page {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  column-gap: 100px;
+  row-gap: 40px;
+  margin: 3rem 0;
+  padding: 0 4rem;
+}
+.detail-page .news-snippet .summary{
+  border: 0;
+  padding: 0;
+}
+.detail-page .news-snippet .featured-image{
+  margin: 0 0 20px;
+}
+.detail-page .news-snippet .summary{
+  font-size: 18px;
+  color: #4f4f4f;
+}
+
+
+.sidebar img{
+  width: 100%;
+}
+.widget{
+  margin: 0 0 1.5em;
+}
+.widget-area .widget {
+  padding: 1.5rem;
+  border: 1px solid #00000014;
+  font-family: var(--primary-font);
+}
+.widget-area .widget .widget-title{
+  margin: 0 0 20px;
+}
+.widget-area .widget ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.widget-area .widget.popular-post ul li{
+  display: flex;
+  margin-bottom: 1rem;
+}
+.widget-area .popular-post.widget ul li .post-thumbnail{
+    margin: 2px 15px 0 0;
+    flex-shrink: 0;
+    flex-basis: 100px;
+    background: none;
+}
+.widget-area .popular-post.widget ul li .post-thumbnail img{
+    height: 70px;
+    object-fit: cover;
+}
+form button {
+  padding: 14px;
+  background-color: #DEAE6B;
+  color: #fff;
+  border: 1px solid #DEAE6B;
+}
+footer.site-footer {
+  background-color: #DEAE6B;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  margin-top: 40px;
+}
+
+footer.site-footer .site-info {
+    font-size: 1rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+}
+.social-icons {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.social-icons-container {
+  margin: 10px
+}
+
+.hidden {
+  display: none;
+}
+@media(max-width:768px){
+  nav {
+    display: none;
+  }
+  #banner .caption .title {
+    font-size: 40px;
+  }
+  .banner-layout .item .caption {
+    padding: 50px 30px;
+}
+.blog-container {
+  padding: 0 15px;
+}
+}
