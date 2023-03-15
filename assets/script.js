@@ -5,10 +5,8 @@ const searchBar = document.querySelector('#searchbar');
 const blogPosts = document.querySelectorAll('.news-snippet');
 
 function handleSearch(event) {
- 
-  alert(true);
+  event.preventDefault()
   const searchTerm = document.querySelector('#searchbar').value;
-
 
   blogPosts.forEach(post => {
     const title = post.querySelector('.news-title').textContent.toLowerCase();
@@ -17,7 +15,6 @@ function handleSearch(event) {
     if (matches) {
       post.classList.remove('hidden');
     } else {
-      alert("unmatches");
       post.classList.add('hidden');
       event.stopImmediatePropagation();
     }
